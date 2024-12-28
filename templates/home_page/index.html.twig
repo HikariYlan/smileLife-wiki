@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} | Accueil{% endblock %}
+
+{% block body %}
+    <header class="home_page_main">
+        <h1>Smile Life Wiki</h1>
+        <h2>Permet de connaître les règles du jeu<br>Et les détails des cartes</h2>
+    </header>
+    <main class="home_page_main">
+        <div class="home_page_menu">
+            <div class="home_page_grid_block">
+                <a href="{{path('app_rules') }}">Règles du jeu</a>
+            </div>
+            <div class="home_page_grid_block">
+                <a href="{{ path('app_main_game') }}">Cartes de base</a>
+            </div>
+            <div class="home_page_grid_block">
+                <a href="{{ path('app_fantasy') }}">Cartes extension Fantaisie</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}
