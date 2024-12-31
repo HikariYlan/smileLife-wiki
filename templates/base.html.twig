@@ -3,13 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Smile Life{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('styles/app.css') }}"
+        <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+        <link rel="icon" href="{{ asset('images/tab_icon.png') }}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+    <a href="{{ path('app_home') }}">
+        <div class="logo">
+            <img src="{{ asset('images/logo.png') }}" alt="logo">
+            <h1>Wiki</h1>
+        </div>
+    </a>
         {% block body %}{% endblock %}
     </body>
     <footer>
-        <p><a href="https://github.com/HikariYlan">©Hikari / Ylan</a> | 2024 - 2025</p>
+        <p><a href="https://github.com/HikariYlan" style="color: var(--folly)">©Hikari / Ylan</a> | 2024 - 2025</p>
     </footer>
 </html>
