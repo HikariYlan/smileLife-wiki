@@ -1,9 +1,23 @@
 body {
-    background-color: skyblue;
+    --rose: rgb(196, 11, 121);
+    --blue: rgb(0, 157, 227);
+    --yellow: rgb(255, 241, 3);
+    --folly: rgb(255, 0, 90);
+    --green: rgb(71, 180, 74);
+    --purple: rgb(137, 42, 150);
+    --red: rgb(229, 45, 31);
+    --orange: rgb(255, 165, 0);
+    background-color: var(--blue);
     font-size: 1.5em;
     font-family: "Josefin Sans", serif;
     display: flex;
     flex-direction: column;
+    width: 1000px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.3em;
+    text-align: justify;
+    border: 2px var(--yellow) solid;
 }
 
 header {
@@ -31,7 +45,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: #FF005A;
+    color: var(--orange);
 }
 
 .main_page_button {
@@ -40,4 +54,40 @@ a {
     padding: 0.3em;
     width: fit-content;
     background-color: black;
+}
+
+.rules_summary {
+    list-style-type: decimal;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary > h1 {
+    margin: 0;
+}
+
+h1, h3 {
+    color: white;
+}
+
+.highlight {
+    color: var(--rose);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.logo > img {
+    width: 50%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
