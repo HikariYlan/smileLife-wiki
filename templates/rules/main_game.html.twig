@@ -1,10 +1,275 @@
 {% extends 'base.html.twig' %}
 
+{% block title %} | Règles / Jeu de base{% endblock %}
+
 {% block body %}
+    <header>
+        <h2>Règles du jeu de base</h2>
+    </header>
+    <main>
+        <section class="summary">
+            <h1>Sommaire</h1>
+            <ul class="rules_summary">
+                <li><a href="#pres_jeu">Présentation du jeu</a></li>
+                <li><a href="#mise_en_place">Mise en place</a></li>
+                <li><a href="#organisation">Organisation de votre vie</a></li>
+                <li><a href="#pro">Cartes pros</a></li>
+                <li><a href="#persos">Cartes persos</a></li>
+                <li><a href="#acquis">Acquisitions</a></li>
+                <li><a href="#special">Cartes spéciales</a></li>
+                <li><a href="#malus">Malus</a></li>
+                <li><a href="#demi_divo">Démission / Divorce</a></li>
+                <li><a href="#distinc">Distinctions</a></li>
+                <li><a href="#additio">Règles additionnelles</a></li>
+            </ul>
+        </section>
+        <section>
+            <div>
+                <h1 id="pres_jeu" class="highlight">Présentation du jeu</h1>
+                <p>
+                    Le jeu consiste à faire et réussir sa vie.
+                    Les cartes représentent pour cela des évènements liés aux domaines professionnel et personnel :
+                    amour, argent, famille, études, carrière, etc.
+                    Chaque joueur tâchera d'obtenir les meilleures cartes pour bâtir sa situation et être le plus heureux possible.
+                    Sans épargner les autres pour autant...
+                </p>
+                <h3>But du jeu</h3>
+                <p>
+                    Posez des cartes face à vous pour faire votre vie.
+                    Les smiles, inscrits en haut à gauche des cartes posées, indiquent votre niveau de bonheur.
+                    Le but du jeu est d'en avoir le plus possible.
+                </p>
+                <h3>Fin du jeu</h3>
+                <p>
+                    Le jeu s'arrête quand la pioche est finie.
+                    Chacun jette alors les cartes qu'il possède encore en main et compte ses smiles
+                    (sur les cartes posées face à lui).
+                    Celui qui a le plus de smiles remporte la partie.
+                </p>
+            </div>
 
+            <div>
+                <h1 id="mise_en_place" class="highlight">Mise en place</h1>
+                <p>
+                    Mélangez les cartes puis distribuez <span class="highlight">5 cartes par joueur.</span>
+                    Chacun gardera son jeu secret jusqu'à la fin de la partie.
+                    Formez la pioche (face cachée) avec les cartes restantes.
+                    Celui qui a le plus de smiles dans son jeu commence !
+                </p>
+                <h3>Déroulement de la partie</h3>
+                <p>
+                    À tour de rôle, <span class="highlight">chaque joueur pioche puis pose une carte</span> au choix de sa main.
+                    Chacun conserve ainsi <span class="highlight">toujours 5 cartes en main.</span>
+                </p>
+                <p>Les cartes sont toujours posées face visible, soit :</p>
+                <ul>
+                    <li><span class="highlight">Devant soi</span>, pour constituer sa vie et marquer des points (en cumulant des smiles).</li>
+                    <li><span class="highlight">Devant un autre joueur</span>, pour le pénaliser (cf. malus).</li>
+                    <li><span class="highlight">Dans la défausse.</span></li>
+                </ul>
+                <p style="text-decoration: underline">
+                    Il est également possible de prendre la dernière carte de la défausse, au lieu de la pioche,
+                    à condition de la poser aussitôt.
+                </p>
+                <p>
+                    Il est <span class="highlight">interdit de reprendre une carte que l'on a défaussée</span> (volontairement ou suite à un malus).
+                    Sauf si elle a été reprise puis rejetée par un autre joueur entretemps.
+                </p>
+            </div>
+
+            <div>
+                <h1 id="organisation" class="highlight">Organisation de votre vie</h1>
+                <p>
+                    Selon les cartes piochées, vous pourrez mener votre vie de différentes manières...
+                </p>
+                <p>
+                    En posant des <span style="color: var(--yellow)">cartes pros</span>, vous pourrez étudier, avoir un métier puis cumuler des salaires...<br>
+                    Les <span style="color: var(--rose)">cartes persos</span> vous permettront de flirter, de vous marier et d'avoir des enfants...<br>
+                    Les <span style="color: var(--green)">cartes acquisitions</span>, gratuites ou payantes, comprennent les maisons, les voyages, les animaux...<br>
+                    Les <span style="color: var(--purple)">cartes spéciales</span> permettent quant à elles de mener des actions.<br>
+                    Enfin, les <span style="color: var(--red)">malus</span> représentent les désagréments de la vie que les joueurs pourront s'infliger entre eux.
+                </p>
+            </div>
+
+            <div>
+                <h1 id="pro" style="color: var(--yellow)">Cartes pros<br><span style="font-size: 0.4em; color: black">ÉTUDES - MÉTIER - SALAIRE</span></h1>
+                <ul>
+                    <li style="color: var(--yellow)">Études</li>
+                </ul>
+                <p>
+                    Les cartes études indiquent votre niveau de formation.
+                    <span class="highlight">Elles vous permettent d'obtenir ensuite un métier</span> (selon votre niveau d'études).
+                    Les cartes études doublent permettent de valider deux niveaux d'un coup.
+                </p>
+                <p>
+                    <span class="highlight">Vous pouvez cumuler jusqu'à 6 cartes études</span> devant vous (simples ou doubles).
+                </p>
+                <ul>
+                    <li style="color: var(--yellow)">Métiers</li>
+                </ul>
+                <p>
+                    Le niveau d'études des métiers est indiqué en haut à gauche de la carte (entre les lauriers).
+                    Il faut avoir acquis <span class="underline">au moins ce niveau d'études pour pouvoir poser le métier</span> concerné.
+                    Rien ne vous empêche donc de poser un métier en ayant fait plus d'études que nécessaire.
+                </p>
+                <p class="highlight">Avoir un métier vous permet ensuite de poser des salaires.</p>
+                <p>
+                    <span class="underline">NB : Vous ne pouvez plus étudier quand vous avez un métier.</span><br>
+                    (Il est cependant possible de démissionner pour reprendre vous études... cf. démission).
+                </p>
+                <ul>
+                    <li style="color: var(--yellow)">Salaires</li>
+                </ul>
+                <p>
+                    Les salaires vont de 1 à 4.
+                    Ils sont plus ou moins élevés selon les métiers.
+                    Leur valeur est symbolisée par des liasses de billets, inscrits en haut à droite des métiers.
+                </p>
+                <p>
+                    Les salaires peuvent être cumulés (un à un) dans n'importe quel ordre :<br>
+                    <span class="highlight">
+                        Une liasse de billets (sur votre métier) vous permet de poser des salaires de niveau 1.<br>
+                        Deux liasses vous permettent de poser des salaires de niveau 1 et 2.<br>
+                        Trois liasses... des salaires de niveau 1-2 et 3.<br>
+                        Quatre liasses... des salaires 1-2-3 et 4.
+                    </span>
+                </p>
+                <h3>Avantages professionnels</h3>
+                <p>
+                    Les avantages professionnels s'appliquent uniquement à certains métiers (cf. liste ci-dessous).
+                    Ils sont notés en bas des cartes concernées.
+                </p>
+                <p>
+                    <span class="highlight">Ils peuvent être instantanés (API)</span> : doivent être utilisés dès que la carte est posé.<br>
+                    <span class="highlight">Ou permanents</span> : valables sur toute la durée du métier.
+                </p>
+                <ul>
+                    <li><span class="highlight">Architecte (APP)</span> : peut poser une maison de sa main sans la payer lors d'un prochain tour.</li>
+                    <li><span class="highlight">Astronaute (API)</span> : peut prendre la carte de son choix dans la défausse pour la jouer directement
+                    (même avantage que la carte spéciale étoile filante).</li>
+                    <li><span class="highlight">Avocat (APP)</span> : ne peut pas divorcer, sauf s'il choisit de le faire volontairement.</li>
+                    <li><span class="highlight">Bandit (APP)</span> : ne peut pas se faire licencier ni être imposé sur ses revenus.</li>
+                    <li><span class="highlight">Barman (APP)</span> : peut cumuler les flirts de manière illimitée avant le mariage.</li>
+                    <li><span class="highlight">Chef des achats / ventes (API)</span> : peut troquer (cf. troc) en enlevant
+                        une carte de sa main pour n'en avoir que 4 durant la transaction, contre 5 pour l'autre joueur.</li>
+                    <li><span class="highlight">Chercheur (APP)</span> : peut piocher une carte supplémentaire pour jouer avec 6 cartes au lieu de 5.
+                    En cas de démission ou licenciement, le joueur jette, en plus du chercheur, une carte de sa main aux choix sous le métier (pour revenir à 5 cartes).
+                    </li>
+                    <li><span class="highlight">Chirurgien / Médecin (APP)</span> : ne peut pas tomber malade et peut poursuivre les études en plus de son activité professionnelle.
+                        Ces études ne peuvent être reprises par un redoublement.</li>
+                    <li><span class="highlight">Garagiste (APP)</span> : ne peut pas subir d'accident.</li>
+                    <li><span class="highlight">Journaliste (API)</span> : peut voir le jeu des autres joueurs et,
+                        s'il le souhaite, divulguer des informations (vraies ou fausses) à voix hautes.</li>
+                    <li><span class="highlight">Médium (API)</span> : peut voir l'avenir en regardant les 13 prochaines cartes de la pioche.</li>
+                    <li><span class="highlight">Militaire (APP)</span> : protège tous les joueurs des attentats.</li>
+                    <li><span class="highlight">Pharmacien (APP)</span> : ne peut pas subir de maladies.</li>
+                    <li><span class="highlight">Pilote de ligne (APP)</span> : peut poser des voyages sans les payer lors de prochains tours.</li>
+                    <li><span class="highlight">Policier (APP)</span> : le bandit et le gourou ne peuvent être posés (par un autre joueur) en sa présence.
+                    S'ils sont déjà posés, ils sont alors sitôt jetés dans la défausse.</li>
+                </ul>
+                <h3>Status professionnels</h3>
+                <p>
+                    Les status professionnels (fonctionnaire ou intérimaire) s'appliquent à certains métiers.
+                    Ils sont inscrits en haut des cartes sour le métier concerné.
+                </p>
+                <p>
+                    <span class="highlight">Fonctionnaire : </span>le joueur ne peut pas être licencié (cf. malus : licenciement).
+                    Concerne les profs (y compris le grand prof), policiers et militaires.
+                </p>
+                <p>
+                    <span class="highlight">Intérimaire : </span>le joueur n'a pas besoin de passer son tour quand il démissionne.
+                    Celui-ci jette son métier dans la défausse <span class="underline">avant ou après avoir pioché</span> puis joue normalement.
+                    Concerne les jardiniers, serveurs, barmen, plombiers et stripteasers.
+                </p>
+            </div>
+
+            <div>
+                <h1 id="persos" class="highlight">Cartes persos<br><span style="font-size: 0.4em; color: black">FLIRT - MARIAGE - ENFANT - ADULTÈRE</span></h1>
+                <ul>
+                    <li style="color: var(--rose)">Flirts</li>
+                </ul>
+                <p>
+                    Vous pouvez flirter quand vient votre tour <span class="underline">tant que vous n'êtes pas marié.</span>
+                    <span>Avoir un flirt ou plus, posé(s) face à vous, permet de poser ensuite un mariage.</span>
+                </p>
+                <p>Vous pouvez cumuler <span>jusqu'à 5 flirts</span> face à vous.</p>
+                <p>
+                    Les flirts ont lieu aux différents endroits indiqués sur leur carte.
+                    Si vous posez un flirt qui a lieu au même endroit que le dernier flirt (non recouvert) d'un autre joueur,
+                    vous récupérez alors aussitôt celui-ci pour le poser par-dessus le vôtre.
+                </p>
+                <p>
+                    NB : Si après avoir cumulé le maximum de flirts, vous récupérez le flirt d'un autre joueur,
+                    celui-ci peut être rajouté à vos 5 flirts. (Il est donc possible d'avoir 6 flirts dans ce cas).
+                </p>
+                <ul>
+                    <li style="color: var(--rose)">Mariages</li>
+                </ul>
+                <p>
+                    <span class="highlight">Vous pouvez vous marier seulement après avoir flirté au moins une fois ou plus.</span>
+                    <span class="underline">Le mariage vous permet de poser ensuite des cartes enfants.</span>
+                </p>
+                <p>
+                    <span class="underline">NB : vous ne pouvez plus flirter lorsque vous êtes marié.</span>
+                    (Il est cependant possible de divorcer ou de commettre des adultères...)
+                </p>
+                <ul>
+                    <li style="color: var(--rose)">Enfants</li>
+                </ul>
+                <p>
+                    Vous pouvez cumuler des enfants, un par un, une fois marié.
+                </p>
+                <ul>
+                    <li style="color: var(--rose)">Adultère</li>
+                </ul>
+                <p>
+                    L'adultère ne peut être posé qu'une fois marié.
+                    <span class="highlight">Il permet ensuite de poursuivre vos flirts, sans limitation, à côté de votre mariage.</span>
+                    Mais en cas de divorce, les dommages seront plus lourds... (cf. malus : divorce).
+                </p>
+                <p>
+                    <span class="highlight">Vous pouvez stopper votre adultère à tout moment.</span>
+                    Pour cela, jetez-le dans la défausse à votre tour (avant ou après avoir pioché) puis jouez.
+                    Les flirts cumulés durant votre adultère sont conservés à côté de vos flirts officiels (sans impact sur leur limitation).
+                    Leurs smiles seront aussi comptabilisés à la fin du jeu.
+                </p>
+            </div>
+
+            <div>
+                <h1 id="acquis" style="color: var(--green)">Acquisitions<br><span style="font-size: 0.4em; color: black">ANIMAL - VOYAGE - MAISON</span></h1>
+                <ul>
+                    <li style="color: var(--green)">Animal de compagnie</li>
+                </ul>
+                <p>
+                    Les animaux sont gratuits et peuvent être posés directement à votre tour.
+                    Ils comprennent un chat, un chien, un lapin un poussin et... une licorne !
+                    <span class="underline">Comme toute acquisition (gratuite ou payante), ils sont cumulables (un à un).</span>
+                </p>
+                <ul>
+                    <li style="color: var(--green)">Voyage</li>
+                </ul>
+                <p>
+                    Les voyages incluent différentes destinations : Londres, Sydney, Le Caire, Rio, New York.
+                    Leur prix est indiqué sur la carte (en tant que montant minimum à débourser).
+                    <span class="underline">Vous devez disposer (face à vous) des salaires nécessaires pour pouvoir les acquérir.</span>
+                </p>
+                <p>
+                    <span class="highlight"> Pour acheter un voyage, retournez les salaires qu'il vous en coûte.</span>
+                    Une fois retournés, ces salaires sont considérés comme investis :
+                    ils ne pourront <span class="underline">plus servir ni être repris, mais conservent leurs smiles pour le comptage final.</span>
+                </p>
+                <ul>
+                    <li style="color: var(--green)">Maison</li>
+                </ul>
+                <p>
+                    Les maisons nécessitent un apport minimum. Comme pour les voyages, vous devez disposer face à vous de cet apport (en salaires) pour pouvoir les acquérir.
+                </p>
+                <p>
+                    <span class="highlight">Pour acheter une maison, retournez les salaires qu'il vous en coûte.</span>
+                    Une fois retournés, ces salaires sont considérés comme investis :
+                    ils ne pourront <span class="underline">plus servir ni être repris, mais conservent leurs smiles pour le comptage final.</span>
+                </p>
+            </div>
+        </section>
+    </main>
 {% endblock %}
-
-{% block title %}
-
-{% endblock %}
-
