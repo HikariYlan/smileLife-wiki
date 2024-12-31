@@ -48,8 +48,11 @@ footer {
 }
 
 a {
-    text-decoration: none;
     color: var(--orange);
+}
+
+a[href="/"] {
+    text-decoration: none;
 }
 
 .main_page_button {
@@ -94,4 +97,8 @@ h1, h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.on_top {
+    text-decoration: none;
 }
