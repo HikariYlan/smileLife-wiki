@@ -16,6 +16,14 @@ class RulesController extends AbstractController
         ]);
     }
 
+    #[Route('/regles/jeu_de_base', name: 'app_rules_main_game')]
+    public function mainGame(): Response
+    {
+        return $this->render('rules/main_game.html.twig', [
+            'controller_name' => 'RulesController',
+        ]);
+    }
+
     #[Route('/regles/trash', name: 'app_rules_trash')]
     public function trash(): Response
     {
