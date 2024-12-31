@@ -89,7 +89,9 @@
         "start": [
             "Composer\\Config::disableProcessTimeout",
             "symfony serve"
-        ]
+        ],
+        "controller": "php bin/console make:controller",
+        "entity": "php bin/console make:entity"
     },
     "conflict": {
         "symfony/symfony": "*"
