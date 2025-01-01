@@ -55,4 +55,7 @@ class RulesController extends AbstractController
             'controller_name' => 'RulesController',
         ]);
     }
+
+    // TODO: Writing "règles additionnelles"
+    // TODO: Commencer les règles "Girl Power"
 }
